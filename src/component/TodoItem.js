@@ -1,10 +1,12 @@
+import todoitem from '../css/todoitem.module.css';
+
 function TodoItem(){
     return(
-        <li className="todo-item">
-            <input type="checkbox" className="todo-item-check" />
-            <mark className="todo-item-text">할일 todo</mark>
-            <button type="button" className="todo-item-del">
-                <img src="add_button.svg" alt="" className="todo-item-img" />                    
+        <li className={todoitem["todo-item"]}>
+            <input type="checkbox" className={todoitem.check} />
+            <mark className={todoitem.text}>할일 todo</mark>
+            <button type="button" className={todoitem.del}>
+                <img src="add_button.svg" alt="" className={todoitem.img} />                    
             </button>
         </li>
     );

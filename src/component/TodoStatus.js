@@ -1,20 +1,23 @@
-function TodoStatus(){
+  
+import todoList from '../css/todolist.module.css';
+import status from '../css/status.module.css';
 
+function TodoStatus({number}){
     return(
-        <div class="status-section">
-            <div class="status-left">10개 남음</div>
-            <div class="status-filter">
-                <button type="button" class="btn-all active">전체보기</button>
-                <button type="button" class="btn-left">남은목록</button>
-                <button type="button" class="btn-complete">완료목록</button>
+        <section className={todoList.section}>
+            <div className={status.section}>
+                <div className={status.left}>{number}개 남음</div>
+                <div className="status-filter">
+                    <button type="button" className={status.btn}>전체목록</button>
+                    <button type="button" className={status.btn}>남은목록</button>
+                    <button type="button" className={status.btn}>완료목록</button>
+                </div>
+                <div className="status-clear">
+                    <button type="button" className={status.btn}>완료목록삭제</button>
+                </div>
             </div>
-            <div class="status-clear">
-                <button type="button" class="btn-clear">완료목록삭제</button>
-            </div>
-        </div>
-
+        </section>
     );
-
 }
 
 export default TodoStatus;
